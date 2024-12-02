@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniqlo.MVC", "Uniqlo.MVC\Uniqlo.MVC.csproj", "{5094AECE-CEED-4CCF-9356-19B10E580679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniqlo.BL", "Uniqlo.BL\Uniqlo.BL.csproj", "{8D8CA242-FEC2-4C2B-BB53-BFE2002C2607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniqlo.DAL", "Uniqlo.DAL\Uniqlo.DAL.csproj", "{DF566790-F2BE-4FDB-86F5-64D496C0EA94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5094AECE-CEED-4CCF-9356-19B10E580679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5094AECE-CEED-4CCF-9356-19B10E580679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5094AECE-CEED-4CCF-9356-19B10E580679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5094AECE-CEED-4CCF-9356-19B10E580679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D8CA242-FEC2-4C2B-BB53-BFE2002C2607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D8CA242-FEC2-4C2B-BB53-BFE2002C2607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D8CA242-FEC2-4C2B-BB53-BFE2002C2607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D8CA242-FEC2-4C2B-BB53-BFE2002C2607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF566790-F2BE-4FDB-86F5-64D496C0EA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF566790-F2BE-4FDB-86F5-64D496C0EA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF566790-F2BE-4FDB-86F5-64D496C0EA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF566790-F2BE-4FDB-86F5-64D496C0EA94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

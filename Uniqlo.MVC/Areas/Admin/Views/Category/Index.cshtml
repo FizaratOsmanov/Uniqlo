@@ -1,0 +1,64 @@
+﻿@using Uniqlo.DAL.Models;
+@model IEnumerable<Category>;
+@{
+    string disabled = string.Empty;
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Category Table</h4>
+                        <p class="card-description">
+                            <a asp-action="Create">Create</a>
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            CategoryName
+                                        </th>
+                                        <th>
+                                            Is Deleted
+                                        </th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    @if (Model != null && Model.Any())
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td class="py-1">@item.Id</td>
+                                                <td>@item.CategoryName</td>
+                                                <td>
+                                                    <a class="btn btn-primary mr-2" asp-action="Info" asp-route-id="@item.Id">Info</a>
+                                                    <a class="btn btn-warning mr-2" style="color:#fff;" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                                                    <a class="btn btn-danger mr-2 @disabled" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr><td colspan="3">No categories available.</td></tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
