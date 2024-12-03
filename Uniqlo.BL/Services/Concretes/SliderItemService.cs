@@ -56,5 +56,34 @@ namespace Uniqlo.BL.Services.Concretes
         }
 
 
+
+        public void SoftDeleteSliderItem(int id)
+        {
+            SliderItem? baseSliderItem = _uniqloDBContext.SliderItems.SingleOrDefault(s => s.Id == id);
+            if (baseSliderItem is null)
+            {
+                throw new Exception($"Slider Item not found.");
+            }
+            baseSliderItem.IsDeleted= true;
+            baseSliderItem.DeleteDate=DateTime.Now;
+
+            _uniqloDBContext.SaveChanges();
+
+        }
+
+        public void HardDeleteSliderItem(int id)
+        {
+
+
+            SliderItem? baseSliderItem = _uniqloDBContext.SliderItems.Find(id);
+            if (baseSliderItem is null)
+            {
+                throw new Exception($"Slider Item not found with this id({id})");
+            }
+
+            _uniqloDBContext.SliderItems.Remove(baseSliderItem);
+        }
+
+
     }
 }

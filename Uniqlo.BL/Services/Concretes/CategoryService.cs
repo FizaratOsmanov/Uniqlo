@@ -59,5 +59,32 @@ namespace Uniqlo.BL.Services.Concretes
             _uniqloDbContext.SaveChanges();
         }
 
+        public void SoftDeleteCategory(int id)
+        {
+            Category? baseCategory = _uniqloDbContext.Categories.SingleOrDefault(s => s.Id == id);
+            if (baseCategory is null)
+            {
+                throw new Exception($"Category not found.");
+            }
+            baseCategory.IsDeleted = true;
+            baseCategory.DeleteDate = DateTime.Now;
+
+            _uniqloDbContext.SaveChanges();
+
+        }
+
+        public void HardDeleteCategory(int id)
+        {
+
+
+            Category? baseCategory = _uniqloDbContext.Categories.Find(id);
+            if (baseCategory is null)
+            {
+                throw new Exception($"Category not found with this id({id})");
+            }
+
+            _uniqloDbContext.Categories.Remove(baseCategory);
+        }
+
     }
 }

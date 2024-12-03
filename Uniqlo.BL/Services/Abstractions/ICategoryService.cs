@@ -14,5 +14,8 @@ namespace Uniqlo.BL.Services.Abstractions
         public void CreateCategory(Category category);
         public void UpdateCategory(int id, Category category);
 
+        public void SoftDeleteCategory(int id);
+        public void HardDeleteCategory(int id);
+
     }
 }

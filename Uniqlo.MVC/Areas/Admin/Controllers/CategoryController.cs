@@ -33,19 +33,14 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(category); // Return with validation errors
+                return View(category); 
             }
             Category category2 = new Category
             {
                 CategoryName = category.CategoryName,
                 CreateDate = DateTime.Now,
-                
-
             };
-
-           _categoryService.CreateCategory(category2);
-
-           
+           _categoryService.CreateCategory(category2);        
             return RedirectToAction(nameof(Index));
         }
 
@@ -68,6 +63,13 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
 
             _categoryService.UpdateCategory(id, category);
 
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            _categoryService.SoftDeleteCategory(id);
             return RedirectToAction(nameof(Index));
         }
     }

@@ -13,8 +13,6 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
         {
             _productService = productService;
         }
-
-
         public IActionResult Index()
         {
             IEnumerable<Product> Products = _productService.GetAllProducts();
@@ -28,11 +26,9 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Create(Product product)
         {
-
             _productService.CreateProduct(product);
             return RedirectToAction(nameof(Index));
         }
-
         [HttpGet]
         public IActionResult Update(int id)
         {
@@ -47,11 +43,14 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
             {
                 return View(product);
             }
-
             _productService.UpdateProduct(id, product);
-
             return RedirectToAction(nameof(Index));
         }
-
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+             _productService.SoftDeleteProduct(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

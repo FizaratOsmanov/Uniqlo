@@ -13,6 +13,7 @@ namespace Uniqlo.BL.Services.Abstractions
         public IEnumerable<Product> GetAllProducts();
         public void CreateProduct(Product product);
         public void UpdateProduct(int id, Product product);
-
+        public void SoftDeleteProduct(int id);
+        public void HardDeleteProduct(int id);
     }
 }

@@ -51,5 +51,32 @@ namespace Uniqlo.BL.Services.Concretes
             product.ProductName = product.ProductName;
             _uniqloDbContext.SaveChanges();
         }
+
+        public void SoftDeleteProduct(int id)
+        {
+            Product? baseProduct = _uniqloDbContext.Products.SingleOrDefault(s => s.Id == id);
+            if (baseProduct is null)
+            {
+                throw new Exception($"Product not found.");
+            }
+            baseProduct.IsDeleted = true;   
+            baseProduct.DeleteDate = DateTime.Now;
+
+            _uniqloDbContext.SaveChanges();
+
+        }
+
+        public void HardDeleteProduct(int id)
+        {
+
+
+            Product? baseProduct = _uniqloDbContext.Products.Find(id);
+            if (baseProduct is null)
+            {
+                throw new Exception($"Product not found with this id({id})");
+            }
+
+            _uniqloDbContext.Products.Remove(baseProduct);
+        }
     }
 }

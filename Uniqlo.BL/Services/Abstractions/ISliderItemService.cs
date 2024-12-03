@@ -14,7 +14,8 @@ namespace Uniqlo.BL.Services.Abstractions
         public IEnumerable<SliderItem> GetAllSliderItems();
         public void CreateSliderItem(SliderItem sliderItem);
         public void UpdateSliderItem(int id, SliderItem sliderItem);
-
+        public void SoftDeleteSliderItem(int id);
+        public void HardDeleteSliderItem(int id);
 
     }
 }
