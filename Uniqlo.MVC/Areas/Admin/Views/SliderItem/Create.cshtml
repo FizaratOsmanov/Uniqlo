@@ -1,0 +1,25 @@
+﻿
+@model SliderItemCreateVM;
+<div class="col-lg-12 grid-margin stretch-card">
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Create SliderItem</h4>
+            <p class="card-description">
+            </p>
+            <form method="post" enctype="multipart/form-data" class="forms-sample">
+
+                <div class="form-group">
+                    <label for="exampleInputImgPath">Image Path</label>
+                    <input  asp-for="Img" class="form-control" id="exampleInputOffer" placeholder="Img">
+                    <span asp-validation-for="Img" class="text-danger"></span>
+                </div>
+                <a class="btn btn-light" asp-controller="SliderItem" asp-action="Index">Cancel</a>
+                <button type="submit" class="btn btn-primary mr-2">Create</button>
+            </form>
+        </div>
+    </div>
+
+</div>
