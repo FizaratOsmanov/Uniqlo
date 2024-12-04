@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f69ms44ihxJCbmF1eqULBGEHyByx2h6Q0iKlzCk+xLg=",
+  "Hash": "0YJ4xog+k6JMKeHWGiH1tobu0ENrc3q7NbiQGFcMARg=",
   "Source": "Uniqlo.MVC",
   "BasePath": "_content/Uniqlo.MVC",
   "Mode": "Default",
@@ -1737,6 +1737,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\LENOVO\\Desktop\\UniqloApp\\Uniqlo.MVC\\wwwroot\\assets\\testFoldre\\AAAAAAAAA.jpg",
+      "SourceId": "Uniqlo.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\Desktop\\UniqloApp\\Uniqlo.MVC\\wwwroot\\",
+      "BasePath": "_content/Uniqlo.MVC",
+      "RelativePath": "assets/testFoldre/AAAAAAAAA#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bakv88buwq",
+      "Integrity": "c9Ahg8jEDNJkjQQyO0IEm/NvBn2s2fv7AGDwLIojvVo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\testFoldre\\AAAAAAAAA.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\LENOVO\\Desktop\\UniqloApp\\Uniqlo.MVC\\wwwroot\\assets\\testFoldre\\WIN_20241203_14_06_42_Pro.jpg",
+      "SourceId": "Uniqlo.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\Desktop\\UniqloApp\\Uniqlo.MVC\\wwwroot\\",
+      "BasePath": "_content/Uniqlo.MVC",
+      "RelativePath": "assets/testFoldre/WIN_20241203_14_06_42_Pro#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wvv4291zbw",
+      "Integrity": "bFBT07PxnndTigZ3JshdnI180M4XhEKLlDtMv5VA8/w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\testFoldre\\WIN_20241203_14_06_42_Pro.jpg"
     },
     {
       "Identity": "C:\\Users\\LENOVO\\Desktop\\UniqloApp\\Uniqlo.MVC\\wwwroot\\css\\bootstrap.min.css",
@@ -13711,6 +13753,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-O2Fpd3M/gS4L/Hg1V0n4T0U9XNpdNBbg7ON/wepF1Bw="
+        }
+      ]
+    },
+    {
+      "Route": "assets/testFoldre/AAAAAAAAA.bakv88buwq.jpg",
+      "AssetFile": "C:\\Users\\LENOVO\\Desktop\\UniqloApp\\Uniqlo.MVC\\wwwroot\\assets\\testFoldre\\AAAAAAAAA.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "161803"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c9Ahg8jEDNJkjQQyO0IEm/NvBn2s2fv7AGDwLIojvVo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 12:50:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bakv88buwq"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/testFoldre/AAAAAAAAA.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c9Ahg8jEDNJkjQQyO0IEm/NvBn2s2fv7AGDwLIojvVo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/testFoldre/AAAAAAAAA.jpg",
+      "AssetFile": "C:\\Users\\LENOVO\\Desktop\\UniqloApp\\Uniqlo.MVC\\wwwroot\\assets\\testFoldre\\AAAAAAAAA.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "161803"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c9Ahg8jEDNJkjQQyO0IEm/NvBn2s2fv7AGDwLIojvVo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 12:50:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c9Ahg8jEDNJkjQQyO0IEm/NvBn2s2fv7AGDwLIojvVo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/testFoldre/WIN_20241203_14_06_42_Pro.jpg",
+      "AssetFile": "C:\\Users\\LENOVO\\Desktop\\UniqloApp\\Uniqlo.MVC\\wwwroot\\assets\\testFoldre\\WIN_20241203_14_06_42_Pro.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "131640"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bFBT07PxnndTigZ3JshdnI180M4XhEKLlDtMv5VA8/w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 12:51:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bFBT07PxnndTigZ3JshdnI180M4XhEKLlDtMv5VA8/w="
+        }
+      ]
+    },
+    {
+      "Route": "assets/testFoldre/WIN_20241203_14_06_42_Pro.wvv4291zbw.jpg",
+      "AssetFile": "C:\\Users\\LENOVO\\Desktop\\UniqloApp\\Uniqlo.MVC\\wwwroot\\assets\\testFoldre\\WIN_20241203_14_06_42_Pro.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "131640"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bFBT07PxnndTigZ3JshdnI180M4XhEKLlDtMv5VA8/w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 12:51:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wvv4291zbw"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/testFoldre/WIN_20241203_14_06_42_Pro.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bFBT07PxnndTigZ3JshdnI180M4XhEKLlDtMv5VA8/w="
         }
       ]
     },

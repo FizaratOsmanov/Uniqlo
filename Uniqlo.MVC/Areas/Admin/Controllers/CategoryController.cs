@@ -13,11 +13,9 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
         {
             _categoryService = categoryService;
         }
-
-        
+       
         public IActionResult Index()
         {
-
             IEnumerable<Category>? Categories = _categoryService.GetAllCategories();
             return View(Categories);
         }
@@ -65,11 +63,16 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
-        [HttpPost]
-        public IActionResult Delete(int id)
+        
+        public IActionResult SoftDelete(int id)
         {
             _categoryService.SoftDeleteCategory(id);
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult HardDelete(int id)
+        {
+            _categoryService.HardDeleteCategory(id);
             return RedirectToAction(nameof(Index));
         }
     }

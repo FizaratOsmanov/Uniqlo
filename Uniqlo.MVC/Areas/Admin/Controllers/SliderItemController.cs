@@ -5,13 +5,12 @@ using Uniqlo.BL.Services.Concretes;
 using Uniqlo.DAL.Models;
 using Uniqlo.MVC.Areas.Admin.ViewModels;
 
-
 namespace Uniqlo.MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class SliderItemController : Controller
     {
-
+        #region aa
         private readonly ISliderItemService _sliderItemService;
         private readonly IWebHostEnvironment _webHostEnvironment;
         public SliderItemController(ISliderItemService sliderItemService, IWebHostEnvironment webHostEnvironment)
@@ -30,6 +29,12 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
             return View();
         }
 
+
+        #endregion
+
+
+
+
         [HttpPost]
         public IActionResult Create(SliderItemCreateVM sliderItemVM)
         {
@@ -42,14 +47,13 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
                 return View(sliderItemVM);
             }
             string fileName=Path.GetFileNameWithoutExtension(sliderItemVM.Img.FileName);
-
-            if(sliderItemVM.Img.Length>80*1024)
+            if(sliderItemVM.Img.Length>80*1024*1024)
             {
                 ModelState.AddModelError("Img", "Fayl cox boyukdur.");
                 return View(sliderItemVM);
             }
             string[] allowedFormat = [".jpg",".png",".jpeg",".svg",".webp"];
-            string extension=Path.GetExtension(fileName);
+            string extension=Path.GetExtension(sliderItemVM.Img.FileName);
             bool isAllowed = false;
             foreach(var format in allowedFormat)
             {
@@ -58,41 +62,34 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
                     isAllowed = true;
                     break;
                 }
-
             }
             if(!isAllowed)
             {
-                ModelState.AddModelError("Img", "icaze yoxdur");
+                ModelState.AddModelError("Img", "Icaze yoxdur");
                 return View(sliderItemVM);
             }
             string uploadPath =Path.Combine(_webHostEnvironment.WebRootPath,"assets","testFoldre");
-            if(Directory.Exists(uploadPath))
+            if(!Directory.Exists(uploadPath))
             {
                 Directory.CreateDirectory(uploadPath);
             }
-
-
-
-
-
             if(Path.Exists(Path.Combine(uploadPath,fileName+extension)))
             {
                 fileName = fileName + Guid.NewGuid().ToString();
             }
             fileName = fileName+extension;
-
-
             uploadPath = Path.Combine(uploadPath,fileName);
             using FileStream fileStream=new FileStream(uploadPath,FileMode.Create);
             sliderItemVM.Img.CopyToAsync(fileStream);
-
             SliderItem sliderItem = new SliderItem()
             {
                 ImagePath=fileName
             };
-            _sliderItemService.CreateSliderItem(sliderItemVM);
+            _sliderItemService.CreateSliderItem(sliderItem);
             return RedirectToAction(nameof(Index));
         }
+
+        #region
 
         [HttpGet]
         public IActionResult Update(int id)
@@ -100,7 +97,6 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
             SliderItem sliderItem = _sliderItemService.GetSliderItemById(id);
             return View(sliderItem);
         }
-
         [HttpPost]
         public IActionResult Update(int id, SliderItem sliderItem)
         {
@@ -117,5 +113,7 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
             _sliderItemService.SoftDeleteSliderItem(id);
             return RedirectToAction(nameof(Index));
         }
+
+        #endregion
     }
 }

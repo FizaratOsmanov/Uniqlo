@@ -80,6 +80,8 @@ wwwroot\Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont.svg
 wwwroot\Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont.ttf
 wwwroot\Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff
 wwwroot\Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff2
+wwwroot\assets\testFoldre\AAAAAAAAA.jpg
+wwwroot\assets\testFoldre\WIN_20241203_14_06_42_Pro.jpg
 wwwroot\css\bootstrap.min.css
 wwwroot\css\core.css
 wwwroot\css\custom.css

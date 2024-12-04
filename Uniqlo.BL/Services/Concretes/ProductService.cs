@@ -77,6 +77,7 @@ namespace Uniqlo.BL.Services.Concretes
             }
 
             _uniqloDbContext.Products.Remove(baseProduct);
+            _uniqloDbContext.SaveChanges();
         }
     }
 }

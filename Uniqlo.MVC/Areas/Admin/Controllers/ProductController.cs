@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Uniqlo.BL.Services.Abstractions;
 using Uniqlo.BL.Services.Concretes;
 using Uniqlo.DAL;
@@ -46,11 +48,19 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
             _productService.UpdateProduct(id, product);
             return RedirectToAction(nameof(Index));
         }
-        [HttpPost]
-        public IActionResult Delete(int id)
+
+        public IActionResult SoftDelete(int id)
         {
              _productService.SoftDeleteProduct(id);
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult HardDelete(int id)
+        {
+            _productService.HardDeleteProduct(id);
+            return RedirectToAction(nameof(Index));
+        }
+
+
     }
 }

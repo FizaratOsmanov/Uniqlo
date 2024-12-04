@@ -20,6 +20,9 @@
                                 <thead>
                                     <tr>
                                         <th>
+                                            Id
+                                        </th>
+                                        <th>
                                             CategoryName
                                         </th>
                                         <th>
@@ -33,15 +36,18 @@
 
                                     @if (Model != null && Model.Any())
                                     {
-                                        foreach (var item in Model)
+                                        foreach (Category item in Model)
                                         {
                                             <tr>
                                                 <td class="py-1">@item.Id</td>
                                                 <td>@item.CategoryName</td>
+                                                <td>@item.IsDeleted</td>
                                                 <td>
                                                     <a class="btn btn-primary mr-2" asp-action="Info" asp-route-id="@item.Id">Info</a>
                                                     <a class="btn btn-warning mr-2" style="color:#fff;" asp-action="Update" asp-route-id="@item.Id">Update</a>
-                                                    <a class="btn btn-danger mr-2 @disabled" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                                    <a class="btn btn-danger mr-2 @disabled" asp-action="SoftDelete" asp-route-id="@item.Id">SoftDelete</a>
+                                                    <a class="btn btn-danger mr-2 @disabled" asp-action="HardDelete" asp-route-id="@item.Id">HardDelete</a>
+
                                                 </td>
                                             </tr>
                                         }
@@ -50,15 +56,12 @@
                                     {
                                         <tr><td colspan="3">No categories available.</td></tr>
                                     }
-
-
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
