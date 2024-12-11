@@ -10,7 +10,7 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
     [Area("Admin")]
     public class SliderItemController : Controller
     {
-        #region aa
+
         private readonly ISliderItemService _sliderItemService;
         private readonly IWebHostEnvironment _webHostEnvironment;
         public SliderItemController(ISliderItemService sliderItemService, IWebHostEnvironment webHostEnvironment)
@@ -29,16 +29,10 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
             return View();
         }
 
-
-        #endregion
-
-
-
-
         [HttpPost]
         public IActionResult Create(SliderItemCreateVM sliderItemVM)
         {
-            if(sliderItemVM.Img is null)
+            if (sliderItemVM.Img is null)
             {
                 return View(sliderItemVM);
             }
@@ -46,51 +40,48 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
             {
                 return View(sliderItemVM);
             }
-            string fileName=Path.GetFileNameWithoutExtension(sliderItemVM.Img.FileName);
-            if(sliderItemVM.Img.Length>80*1024*1024)
+            string fileName = Path.GetFileNameWithoutExtension(sliderItemVM.Img.FileName);
+            if (sliderItemVM.Img.Length > 5 * 1024 * 1024)
             {
                 ModelState.AddModelError("Img", "Fayl cox boyukdur.");
                 return View(sliderItemVM);
             }
-            string[] allowedFormat = [".jpg",".png",".jpeg",".svg",".webp"];
-            string extension=Path.GetExtension(sliderItemVM.Img.FileName);
+            string[] allowedFormat = [".jpg", ".png", ".jpeg", ".svg", ".webp"];
+            string extension = Path.GetExtension(sliderItemVM.Img.FileName);
             bool isAllowed = false;
-            foreach(var format in allowedFormat)
+            foreach (var format in allowedFormat)
             {
-                if(format==extension)
+                if (format == extension)
                 {
                     isAllowed = true;
                     break;
                 }
             }
-            if(!isAllowed)
+            if (!isAllowed)
             {
                 ModelState.AddModelError("Img", "Icaze yoxdur");
                 return View(sliderItemVM);
             }
-            string uploadPath =Path.Combine(_webHostEnvironment.WebRootPath,"assets","testFoldre");
-            if(!Directory.Exists(uploadPath))
+            string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "testFoldre");
+            if (!Directory.Exists(uploadPath))
             {
                 Directory.CreateDirectory(uploadPath);
             }
-            if(Path.Exists(Path.Combine(uploadPath,fileName+extension)))
+            if (Path.Exists(Path.Combine(uploadPath, fileName + extension)))
             {
                 fileName = fileName + Guid.NewGuid().ToString();
             }
-            fileName = fileName+extension;
-            uploadPath = Path.Combine(uploadPath,fileName);
-            using FileStream fileStream=new FileStream(uploadPath,FileMode.Create);
+            fileName = fileName + extension;
+            uploadPath = Path.Combine(uploadPath, fileName);
+            using FileStream fileStream = new FileStream(uploadPath, FileMode.Create);
             sliderItemVM.Img.CopyToAsync(fileStream);
             SliderItem sliderItem = new SliderItem()
             {
-                ImagePath=fileName
+                ImagePath = fileName
             };
             _sliderItemService.CreateSliderItem(sliderItem);
             return RedirectToAction(nameof(Index));
         }
-
-        #region
-
         [HttpGet]
         public IActionResult Update(int id)
         {
@@ -104,7 +95,7 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
             {
                 return View(sliderItem);
             }
-            _sliderItemService.UpdateSliderItem (id, sliderItem);
+            _sliderItemService.UpdateSliderItem(id, sliderItem);
             return RedirectToAction(nameof(Index));
         }
         [HttpPost]
@@ -114,6 +105,6 @@ namespace Uniqlo.MVC.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        #endregion
+
     }
 }

@@ -298,3 +298,9 @@ C:\Users\LENOVO\Desktop\UniqloApp\Uniqlo.MVC\obj\Debug\net8.0\refint\Uniqlo.MVC.
 C:\Users\LENOVO\Desktop\UniqloApp\Uniqlo.MVC\obj\Debug\net8.0\Uniqlo.MVC.pdb
 C:\Users\LENOVO\Desktop\UniqloApp\Uniqlo.MVC\obj\Debug\net8.0\Uniqlo.MVC.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\UniqloApp\Uniqlo.MVC\obj\Debug\net8.0\ref\Uniqlo.MVC.dll
+C:\Users\LENOVO\Desktop\UniqloApp\Uniqlo.MVC\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\LENOVO\Desktop\UniqloApp\Uniqlo.MVC\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\LENOVO\Desktop\UniqloApp\Uniqlo.MVC\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\LENOVO\Desktop\UniqloApp\Uniqlo.MVC\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\LENOVO\Desktop\UniqloApp\Uniqlo.MVC\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\LENOVO\Desktop\UniqloApp\Uniqlo.MVC\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

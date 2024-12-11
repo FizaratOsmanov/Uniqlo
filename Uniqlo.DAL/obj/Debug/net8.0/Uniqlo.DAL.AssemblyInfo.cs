@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Uniqlo.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78b229d5a7f9467f386d5267be946789979cc341")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+445c8fbcaaeedbe30356a9629d30439704af5d87")]
 [assembly: System.Reflection.AssemblyProductAttribute("Uniqlo.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Uniqlo.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
